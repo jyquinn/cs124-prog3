@@ -7,6 +7,7 @@ public class PrePartitionSolution extends AbstractSolution  {
 	public PrePartitionSolution (long[] nums_init){
 		sequence = nums_init;
 		
+		// make sure there's a solution...
 		solution = null;
 	}
 	
@@ -16,8 +17,9 @@ public class PrePartitionSolution extends AbstractSolution  {
 	}
 	
 	public long getResidue(){
-		return 1;
+		return solution.getResidue();
 	}
+	
 	public Solution getRandNeigbor(){
 		return this;
 	}

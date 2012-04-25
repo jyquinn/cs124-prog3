@@ -1,0 +1,37 @@
+
+public class StandardSolution implements Solution {
+	private long[] sequence;
+	private boolean[] partitions;
+	
+	// constructor without partitions creates random solution
+	public StandardSolution (long[] nums){
+		sequence = nums;
+	}
+
+	public StandardSolution (long[] nums, boolean[] parts){
+		sequence = nums;
+		partitions = parts;
+	}
+	
+	public long getResidue(){
+		long residue = 0;
+		for (int i = 0; i < sequence.length; i++){
+			if (partitions[i])
+				residue += sequence[i];
+			else
+				residue -= sequence[i];
+		}
+		return Math.abs(residue);
+	}
+	
+	public Solution getRandNeigbor(){
+		StandardSolution rand_neighbor = new StandardSolution
+	}
+	
+	public Solution randSolution(){
+		return new StandardSolution(sequence);
+	}
+	
+
+	
+}

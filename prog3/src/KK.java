@@ -9,7 +9,7 @@ public class KK {
 		nums = sequence;
 	}
 	
-	private long getResidue(){
+	public long getResidue(){
 		while (nums.getSize() > 1){
 			nums.insert(Math.abs(nums.extractMax() - nums.extractMax()));
 		}
