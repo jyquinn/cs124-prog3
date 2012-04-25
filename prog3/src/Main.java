@@ -28,6 +28,8 @@ public class Main {
 			nums[i] = Integer.parseInt(numStrings[i]);		
 		}
 		
+		testHeap();
+		
 	}
 	
 	public long[] genRandomExperiment(int n, int max_int){
@@ -40,9 +42,26 @@ public class Main {
 	
 	public long[] readExperiment(String file){
 		long[] sequence = new long[100];
-		File f = new File(file);
-		//TODO finish
+//		File f = new File(file);
+//		//TODO finish
 		return sequence;
+	}
+	
+	public static void testHeap(){
+		int n = 11;
+		MaxHeap h = new MaxHeap(n);
+		Random rand = new Random();
+		for (int i = 0; i < 10; i++){
+			h.insert(rand.nextInt(10));
+		}
+		h.printHeap();
+		
+		
+		System.out.print("pulling in order\n");
+		for (int i = 0; i<10; i++){
+			System.out.print(h.extractMax());
+			System.out.println();
+		}
 	}
 	
 
