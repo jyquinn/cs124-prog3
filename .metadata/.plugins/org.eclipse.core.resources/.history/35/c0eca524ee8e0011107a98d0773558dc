@@ -1,0 +1,12 @@
+
+public interface Solution {
+	
+	public long getResidue();
+	public Solution getRandNeigbor();
+	public static Solution randSolution();
+	
+	public Solution runRandom();
+	public Solution runHillClimbing();
+	public Solution runSimulatedAnnealing();
+	
+}

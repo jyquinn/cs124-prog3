@@ -1,0 +1,16 @@
+
+public class KK {
+
+	private Heap nums;
+	
+	public KK(long[] nums_init){
+		
+	}
+	
+	private long runKK(Solution s){
+		while (nums.getSize() > 1){
+			nums.insert(Math.abs(nums.extractMax() - nums.extractMax()));
+		}
+		return nums.extractMax();
+	}
+}

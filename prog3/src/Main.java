@@ -1,6 +1,7 @@
 
 public class Main {
 
+	public static int MAX_ITER = 25000;
 	/**
 	 * @param args
 	 */

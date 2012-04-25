@@ -1,0 +1,26 @@
+
+public abstract class AbstractSolution implements Solution {
+
+	public Solution runRandom(){
+		Solution s = this;
+		int count = 0;
+		while (count < Main.MAX_ITER){
+			Solution rand_soln = this.randSolution();
+			if (rand_soln.getResidue() < s..getResidue())
+				s = rand_soln;
+			count++;
+		}
+		return s;
+	}
+	public Solution runHillClimbing(){
+		Solution s = this;
+		int count = 0;
+		while(count < Main.MAX_ITER){
+			Solution rand_neighbor = s.getRandNeigbor();
+			
+		}
+	}
+	public Solution runSimulatedAnnealing(){
+		return this;
+	}
+}

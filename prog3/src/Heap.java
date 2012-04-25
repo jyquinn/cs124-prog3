@@ -47,8 +47,8 @@ public class Heap {
 				
 	}
 	
-	public int getLast_elt() {
-		return last_elt;
+	public int getSize() {
+		return last_elt+1;
 	}
 
 

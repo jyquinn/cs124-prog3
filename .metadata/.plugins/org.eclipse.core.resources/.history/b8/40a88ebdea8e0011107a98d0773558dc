@@ -1,0 +1,30 @@
+
+public class PrePartitionSolution implements Solution {
+	public PrePartitionSolution (long[] nums){
+		
+	}
+	
+	public long getResidue(){
+		return 1;
+	}
+	public Solution getRandNeigbor(){
+		return this;
+	}
+	
+	public Solution randSolution(){
+		return this;
+	}
+	
+	public Solution runRandom(){
+		return this;
+	}
+	
+	public Solution runHillClimbing(){
+		return this;
+	}
+	
+	public Solution runSimulatedAnnealing(){
+		return this;
+	}
+	
+}

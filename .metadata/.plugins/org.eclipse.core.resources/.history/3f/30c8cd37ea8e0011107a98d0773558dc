@@ -1,0 +1,8 @@
+
+public interface Solution {
+	
+	public long getResidue();
+	public Solution getRandNeigbor();
+	public Solution randSolution();
+	
+}
