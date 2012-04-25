@@ -8,7 +8,7 @@ public class PrePartitionSolution extends AbstractSolution  {
 		sequence = nums_init;
 		partitions = parts;
 		
-		long[] mod_sequence = getNewSequence();
+		mod_sequence = getNewSequence();
 		solution = new KK(mod_sequence);
 	}
 	

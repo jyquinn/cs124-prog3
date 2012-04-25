@@ -4,17 +4,16 @@ public class PrePartitionSolution extends AbstractSolution  {
 	private long[] partitions;
 	private KK solution;
 	
-	public PrePartitionSolution (long[] nums_init, long[] parts){
+	public PrePartitionSolution (long[] nums_init){
 		sequence = nums_init;
-		partitions = parts;
 		
-		long[] mod_sequence = getNewSequence();
-		solution = new KK(mod_sequence);
+		// make sure there's a solution...
+		solution = null;
 	}
 	
-	private long[] getNewSequence(){
+	private KK getNewSequence(){
 		//TODO implement transition to A' sequence from partitions and sequence
-		return sequence;
+		return new KK(sequence);
 	}
 	
 	public long getResidue(){

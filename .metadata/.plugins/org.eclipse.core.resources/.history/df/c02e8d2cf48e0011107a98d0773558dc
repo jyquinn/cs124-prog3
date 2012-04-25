@@ -25,7 +25,6 @@ public class Main {
 	public long[] readExperiment(String file){
 		long[] sequence = new long[100];
 		File f = new File(file);
-		//TODO finish
 		return sequence;
 	}
 	

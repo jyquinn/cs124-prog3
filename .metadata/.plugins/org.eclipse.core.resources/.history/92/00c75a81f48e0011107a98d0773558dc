@@ -1,11 +1,11 @@
 
 public class KK {
-	private MaxHeap nums;
+	private Heap nums;
 	
 	public KK(long[] nums_init){
-		nums = new MaxHeap(nums_init);
+		nums = new Heap(nums_init);
 	}
-	public KK(MaxHeap nums_heaped){
+	public KK(Heap nums_heaped){
 		nums = nums_heaped;
 	}
 	

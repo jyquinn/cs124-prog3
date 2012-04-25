@@ -5,7 +5,7 @@ public class KK {
 	public KK(long[] nums_init){
 		nums = new MaxHeap(nums_init);
 	}
-	public KK(MaxHeap nums_heaped){
+	public KK(Heap nums_heaped){
 		nums = nums_heaped;
 	}
 	
