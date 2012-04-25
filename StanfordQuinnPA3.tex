@@ -1,0 +1,42 @@
+\documentclass[solution, letterpaper]{cs124}
+\usepackage{dsfont}
+
+%% Please fill in your name and collaboration statement here.
+\newcommand{\studentName}{**NICK STANFORD**}
+\newcommand{\collaborationStatement}{**I collaborated with Julia Winn, Billy Cember, and Lexi Ross**}
+
+\begin{document}
+
+\header{1}{Tuesday, February 7, 2012}
+
+
+\setcounter{Part}{1}
+ \begin{center}
+Nick Stanford Jackie Quinn
+ \end{center}
+
+\problem{} 
+Give a dynamic programming solution to the Number Partition problem.
+
+\subsolution
+
+
+We will be dealing with a $n$ by $b$ matrix. As stated in the problem, $n$ is the number of elements in the set and $b$ is the sum of all of the elements in the set. Conceptually we want the ith jth entry $P(i,j)$ to equal one if it is possible to sum to j using only $s_1 ... s_i$ and zero otherwise. The following recurrence captures this:
+
+$$P(i,j) = \max{\{P(i-1,j), P(i-1,j-s_i)\}} $$
+
+When the matrix is totally filled in, we look at the bottom row. This represents all of the possible sums that can be reached using a subset of the elements in S. We scan this line, looking for the element closest in value to $\frac{b}{2}$. Call it $A$. The residue is then $2A-b$.
+
+Running time: we fill in $nb$ squares, each of which is constant time. $O(nb)$. 
+
+\problem{} 
+Explain brieﬂy how the Karmarkar-Karp algorithm can be implemented in O(nlogn) steps, assuming the values in A are small enough that arithmetic operations take one step.
+
+\subsolution Take your set of values and sort it in $O(n \log{n})$ time. Then pull off the top two elements. Do the differencing, discard the zero, and insert the difference back into the sorted list. This takes $O(\log{n})$ time. Each time we take a difference, we discard an element. Therefore, we repeat this $n$ times. This gives a running time of
+
+$$ n \log{n} + n \log{n} = O(n\log{n}) $$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

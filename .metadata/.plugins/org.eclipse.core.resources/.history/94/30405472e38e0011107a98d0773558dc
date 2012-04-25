@@ -1,9 +1,0 @@
-
-public class KK {
-
-	private Heap nums;
-	
-	public Heap(long[] nums_init){
-		nums = new heap 
-	}
-}

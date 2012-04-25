@@ -1,9 +1,0 @@
-
-public class KK {
-
-	private Heap nums;
-	
-	public KK(long[] nums_init){
-		
-	}
-}
