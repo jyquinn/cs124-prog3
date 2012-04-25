@@ -46,36 +46,6 @@ public class MaxHeap {
 	}
 	
 	private void maxHeapify (int n){
-		int ind_l = n*2+1;
-		int ind_r = n*2+2;
-		int largest;
-		
-		if (ind_l < last_elt && heap[ind_l] > heap[n])
-			largest = ind_l;
-		else
-			largest = n;
-		
-		if (ind_r < last_elt && heap[ind_r] > heap[largest])
-			largest = ind_r;
-			
-		if (largest != n){
-			long temp = heap[n];
-			heap[n] = heap[largest];
-			heap[largest] = temp;
-			
-
-			maxHeapify(largest);
-		}
-			
-				
-	}
-	
-	public void printHeap(){
-		System.out.printf("Frontier index: %d\n", last_elt);
-		System.out.println("Heap: ");
-		for (int i = 0; i < last_elt; i++)
-			System.out.printf("index: %d, value: %d",i,heap[i]);
-		System.out.println();
 		
 	}
 }

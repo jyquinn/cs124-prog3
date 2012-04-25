@@ -75,6 +75,9 @@ public class MaxHeap {
 		System.out.println("Heap: ");
 		for (int i = 0; i < last_elt; i++)
 			System.out.printf("index: %d, value: %d",i,heap[i]);
+		System.out.println("Indices: ");
+		for (int i = 0; i < indices.length; i++)
+			System.out.printf("node index: %d, heap index: %d\n",i,indices[i]);
 		System.out.println();
 		
 	}

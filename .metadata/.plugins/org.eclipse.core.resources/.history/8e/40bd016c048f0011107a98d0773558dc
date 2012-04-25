@@ -69,15 +69,6 @@ public class MaxHeap {
 			
 				
 	}
-	
-	public void printHeap(){
-		System.out.printf("Frontier index: %d\n", last_elt);
-		System.out.println("Heap: ");
-		for (int i = 0; i < last_elt; i++)
-			System.out.printf("index: %d, value: %d",i,heap[i]);
-		System.out.println();
-		
-	}
 }
 
 
