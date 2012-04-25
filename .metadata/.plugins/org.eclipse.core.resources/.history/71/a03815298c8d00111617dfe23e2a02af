@@ -1,0 +1,10 @@
+
+public class StandardSolution {
+
+	public StandardSolution (int size){
+		
+	}
+	public StandardSolution (String file){
+		
+	}
+}
