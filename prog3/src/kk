@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -e
+
+
+
+#CP=commons-io-2.1.jar:.
+
+
+#compile 
+javac -cp $CP Main.java *.java
+
+#run
+java Main $*

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -e
+
+
+#CP=junit-4.8.1.jar:.
+CP=.
+
+#CP=commons-io-2.1.jar:.
+CP=.
+
+#compile 
+javac -cp $CP Main.java *.java
+
+#run
+java Main $*
