@@ -3,12 +3,11 @@
 set -e
 
 
-
-#CP=commons-io-2.1.jar:.
+make clean
 
 
 #compile 
-javac -cp $CP Main.java *.java
+javac -cp .:./commons-io-2.1.jar ./main.java
 
 #run
 java Main $*
