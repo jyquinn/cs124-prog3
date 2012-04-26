@@ -15,9 +15,13 @@ public abstract class AbstractSolution implements Solution {
 	public Solution runHillClimbing(){
 		Solution s = this;
 		int count = 0;
+		long n_res = 0;
+		long s_res = 0;
 		while(count < Main.MAX_ITER){
 			Solution rand_neighbor = s.getRandNeigbor();
-			if (rand_neighbor.getResidue() < s.getResidue())
+			n_res = rand_neighbor.getResidue();
+			s_res = s.getResidue();
+			if (n_res < s_res)
 				s = rand_neighbor;
 			count++;
 		}
