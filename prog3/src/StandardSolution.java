@@ -1,5 +1,4 @@
 import java.util.Random;
-import java.util.Arrays;
 
 
 public class StandardSolution extends AbstractSolution {
@@ -35,7 +34,7 @@ public class StandardSolution extends AbstractSolution {
 	}
 	
 	public Solution getRandNeigbor(){
-		boolean[] neighbor_partitions = Arrays.copyOf(partitions, partitions.length);
+		boolean[] neighbor_partitions = Main.copyOf(partitions);
 		
 		// do we need to worry about seeding???
 		Random rand = new Random();

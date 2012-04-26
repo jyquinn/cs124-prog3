@@ -64,7 +64,7 @@ public class PrePartitionSolution extends AbstractSolution  {
 		
 		while(partitions[i]==j)
 			j = rand.nextInt(n);
-		int[] new_partitions = Arrays.copyOf(partitions, partitions.length);
+		int[] new_partitions = Main.copyOf(partitions);
 		new_partitions[i] = j;
 		
 		return new PrePartitionSolution(sequence,new_partitions);
