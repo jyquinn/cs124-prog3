@@ -161,6 +161,8 @@ public class Main {
 					+ pre_sa_res[i] + " " + pre_sa_time[i] + "    " 
 					);
 		}
+		
+		/*
 		System.out.println("kk: avg=" + avgArray(kk_res) + " var =" + varArray(kk_res)
 				+ "kk-time: avg=" + avgArray(kk_time) + "var=" + varArray(kk_time));
 		
@@ -181,6 +183,8 @@ public class Main {
 		
 		System.out.println("pre_sa: avg=" + avgArray(pre_sa_res) + " var =" + varArray(pre_sa_res)
 				+ " pre_sa_res-time: avg=" + avgArray(pre_sa_res) + " var=" + varArray(pre_sa_res));
+				
+		*/		
 	}
 	
 	public static long avgArray(long[] nums){
