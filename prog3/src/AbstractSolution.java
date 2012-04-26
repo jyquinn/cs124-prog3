@@ -33,11 +33,13 @@ public abstract class AbstractSolution implements Solution {
 				s = rand_neighbor;
 			else if (Math.random() < Math.exp((s.getResidue()-rand_neighbor.getResidue())/timeFunction(count)))
 				s = rand_neighbor;
-			}
-		if (s.getResidue() < s_store.getResidue())
-			return s;
-		else
-			return s_store;
+			if (s.getResidue() < s_store.getResidue())
+				s_store = s;
+			count++;
+		}
+			
+		return s_store;
+		
 	}
 	private static double timeFunction(int iter){
 		return (Math.pow(10, 10)*Math.pow(0.8, iter/300.0));
