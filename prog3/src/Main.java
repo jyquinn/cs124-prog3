@@ -30,7 +30,7 @@ public class Main {
 			nums[i] = Integer.parseInt(numStrings[i]);		
 		}
 		
-		mainScript();
+		mainScript(nums);
 		
 	}
 	
@@ -79,7 +79,7 @@ public class Main {
 	} 
 	
 	
-	public static void mainScript(){
+	public static void mainScript(long[] nums){
 		int i;
 		
 		long[] kk_res        = new long[NUM_TESTS];
@@ -102,8 +102,17 @@ public class Main {
 		long time_finish = 0;
 		
 		for (i=0; i< NUM_TESTS; i++){
-			//long[] exp = genRandomExperiment(FILE_SIZE);
-			long[] exp = new long[]{5,7,10,8,6};
+			long[] exp = genRandomExperiment(FILE_SIZE);
+			//long[] exp = new long[]{5,7,10,8,6};
+			
+			/*
+			long avg = avgArray(exp);
+			long var = varArray(exp);
+			
+			System.out.println("avg:" + avg + " var:" + var);
+			*/
+			
+			//long[] exp = nums;
 			KK kk_exp = new KK(exp);
 			StandardSolution stand_exp = new StandardSolution(exp);
 			PrePartitionSolution pre_exp = new PrePartitionSolution(exp);
@@ -152,5 +161,46 @@ public class Main {
 					+ pre_sa_res[i] + " " + pre_sa_time[i] + "    " 
 					);
 		}
+		System.out.println("kk: avg=" + avgArray(kk_res) + " var =" + varArray(kk_res)
+				+ "kk-time: avg=" + avgArray(kk_time) + "var=" + varArray(kk_time));
+		
+		System.out.println("stand_rr: avg=" + avgArray(stand_rr_res) + " var =" + varArray(stand_rr_res)
+				+ " stand_rr_res-time: avg=" + avgArray(stand_rr_res) + " var=" + varArray(stand_rr_res));
+		
+		System.out.println("stand_hc: avg=" + avgArray(stand_hc_res) + " var =" + varArray(stand_hc_res)
+				+ " stand_hc_res-time: avg=" + avgArray(stand_hc_res) + " var=" + varArray(stand_hc_res));
+		
+		System.out.println("stand_sa: avg=" + avgArray(stand_sa_res) + " var =" + varArray(stand_sa_res)
+				+ " stand_rr_res-time: avg=" + avgArray(stand_sa_res) + " var=" + varArray(stand_sa_res));
+		
+		System.out.println("pre_rr: avg=" + avgArray(pre_rr_res) + " var =" + varArray(pre_rr_res)
+				+ " pre_rr_res-time: avg=" + avgArray(pre_rr_res) + " var=" + varArray(pre_rr_res));
+		
+		System.out.println("pre_hc: avg=" + avgArray(pre_hc_res) + " var =" + varArray(pre_hc_res)
+				+ " pre_hc_res-time: avg=" + avgArray(pre_hc_res) + " var=" + varArray(pre_hc_res));
+		
+		System.out.println("pre_sa: avg=" + avgArray(pre_sa_res) + " var =" + varArray(pre_sa_res)
+				+ " pre_sa_res-time: avg=" + avgArray(pre_sa_res) + " var=" + varArray(pre_sa_res));
 	}
+	
+	public static long avgArray(long[] nums){
+		int i=0;
+		long avg = 0;
+		for (i=0; i<nums.length; i++){
+			avg = (avg) + (nums[i])/nums.length;
+		}
+		return avg;
+	}
+	
+	public static long varArray(long[] nums){
+		int i=0;
+		long avg = avgArray(nums);
+		long square_avg= 0;
+		for (i=0; i<nums.length; i++){
+			square_avg = square_avg + (nums[i]*nums[i])/nums.length;
+		}
+		return square_avg-(avg*avg);
+	}
+	
+	
 }
