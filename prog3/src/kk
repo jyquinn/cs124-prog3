@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
 
-set -e
-
-
-make clean
-
-
 #compile 
 javac -cp .:./commons-io-2.1.jar ./main.java
 
 #run
-java Main $*
+java -cp .:./commons-io-2.1.jar Main $*
