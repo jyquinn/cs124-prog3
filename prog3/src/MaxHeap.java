@@ -44,9 +44,6 @@ public class MaxHeap {
 			maxHeapify(0);
 		
 			return max;
-		} else if(last_elt == 0) {
-			last_elt--;
-			return heap[0];
 		}
 		else
 			return -1;
