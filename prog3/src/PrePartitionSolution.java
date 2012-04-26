@@ -26,6 +26,7 @@ public class PrePartitionSolution extends AbstractSolution  {
 		sequence = nums_init;
 		partitions = parts;
 		
+		rand = new Random();
 		long[] mod_sequence = getNewSequence();
 		solution = new KK(mod_sequence);
 	}
